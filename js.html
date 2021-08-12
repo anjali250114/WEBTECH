@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: #008CBA;
+}
+</style>
+</head>
+<body>
+
+<div>
+  <h1>Joystick</h1>
+  <p>A joystick is an input device consisting of a stick that pivots on a base and reports its angle or direction to the device it is controlling. A joystick, also known as the control column, is the principal control device in the cockpit of many civilian and military aircraft, either as a centre stick or side-stick. It often has supplementary switches to control various aspects of the aircraft's flight<br>
+  <a target="_blank" href="https://en.wikipedia.org/wiki/Joystick"><b>"For more information"</b></a> link.</p>
+  
+ <center> <img src="C:\Users\HP\Desktop\computerh\js.png"></img></center>
+ <center>
+<p>Image to use:</p>
+<img id="scream" src="C:\Users\HP\Desktop\computerh\jsp.png" alt="The Scream" width="250" height="197">
+
+<p>Canvas to fill:</p>
+<canvas id="myCanvas" width="800" height="500"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<p><button onclick="myCanvas()">Show</button></p>
+
+<script>
+function myCanvas() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("scream");
+  ctx.drawImage(img,30,30);
+}
+</script>
+
+</center>
+</div>
+<br><a href="comp.html">Back</a></br>
+
+</body>
+</html>
