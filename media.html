@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Computer hardware</title>
+        <link rel="stylesheet" href="css/styleform.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo"><img src="images/music.png" alt="" title="">Computer hardware store</a>
+            <ul class="nav">
+                <li><a href="comp.html">Home</a></li>
+                <li><a href="https://aelieve.com/rankings/websites/category/electronics/top-computer-hardware-sites/">Computer hardwares</a></li>
+                <li><a href="media.html">In Media</a></li>
+                <li><a href="https://mdcomputers.in/">Categories</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+        </header>
+
+        <div class="vid">
+                <h1>Computer fundamental for Beginners</h1><br>
+                <p>Don't know what to focus on or how to move forward? <br> overwhelmed with too much to practice?<br> You need to revamp your fundamentals!</p>
+            <video width="800" controls>
+                <source src="C:\Users\HP\Desktop\computerh/video1.mp4" type="video/mp4" autoplay muted>
+              </video>
+
+              <p>Video Credit <a href="https://www.youtube.com/watch?v=Iwr18ssZww8" target="_blank">Click Here</a>.</p>
+        </div>
+
+        <div class="article">
+            <h2>Let’s take a look at beginners guide.</h2>
+            <ol>
+                <li>How does a CPU work?</li>
+                <audio controls><source src="C:\Users\HP\Desktop\computerh/aud1.mp3" type="audio/mpeg"></audio>
+                <p>The CPU executes instructions that perform a set of basic operations. There are arithmetic operations like addition, subtraction, multiplication and division. Memory operations move data from one location to another. Logical operations test a condition and make a decision based on the result.</p>
+                <li>About hard disk !</li>
+                <audio controls><source src="C:\Users\HP\Desktop\computerh/aud2.mp3" type="audio/mpeg"></audio>
+                <p>A hard disk drive, hard disk, hard drive, or fixed disk is an electro-mechanical data storage device that stores and retrieves digital data using magnetic storage and one or more rigid rapidly rotating platters coated with magnetic material..</p>
+                <li>What is computer memory RAM?</li>
+                <audio controls><source src="C:\Users\HP\Desktop\computerh/aud3.mp3" type="audio/mpeg"></audio>
+                <p>Computer memory or random access memory (RAM) is your system’s short-term data storage; it stores the information your computer is actively using so that it can be accessed quickly. The more programs your system is running, the more memory you’ll need</p>
+              </ol> 
+        </div>
+
+        <div class="location">
+        <h2>Store location</h2> 
+        <button onclick="getlocation();"> Show Position</button> 
+        <div id="demo" style="width: 100%; height: 400px;"></div> 
+       
+        <script src="https://www.google.com/maps/place/Vedant+Computers/@22.5430099,88.2536875,11z/data=!4m9!1m2!2m1!1scomputer+store+kolkata!3m5!1s0x3a0277a90c45b09b:0x8bcd00657ef5add7!8m2!3d22.5673069!4d88.3566054!15sChZjb21wdXRlciBzdG9yZSBrb2xrYXRhWhgiFmNvbXB1dGVyIHN0b3JlIGtvbGthdGGSAQ5jb21wdXRlcl9zdG9yZQ"> </script> 
+        
+        <script type="text/javascript"> 
+        function getlocation(){ 
+            if(navigator.geolocation){ 
+                navigator.geolocation.getCurrentPosition(showPos, showErr); 
+            }
+            else{
+                alert("Sorry! your Browser does not support Geolocation API")
+            }
+        } 
+        //Showing Current Poistion on Google Map
+        function showPos(position){ 
+            latt = position.coords.latitude; 
+            long = position.coords.longitude; 
+            var lattlong = new google.maps.LatLng(latt, long); 
+            var myOptions = { 
+                center: lattlong, 
+                zoom: 15, 
+                mapTypeControl: true, 
+                navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL} 
+            } 
+            var maps = new google.maps.Map(document.getElementById("demo"), myOptions); 
+            var markers = 
+            new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"}); 
+        } 
+
+        //Handling Error and Rejection
+             function showErr(error) {
+              switch(error.code){
+              case error.PERMISSION_DENIED:
+             alert("User denied the request for Geolocation API.");
+              break;
+             case error.POSITION_UNAVAILABLE:
+             alert("USer location information is unavailable.");
+            break;
+            case error.TIMEOUT:
+            alert("The request to get user location timed out.");
+            break;
+           case error.UNKNOWN_ERROR:
+            alert("An unknown error occurred.");
+            break;
+           }
+        }        </script> 
+        </div>
+    </body>
+</html>
